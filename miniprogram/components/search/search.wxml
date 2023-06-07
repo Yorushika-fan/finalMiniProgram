@@ -1,0 +1,4 @@
+<!--components/search/search.wxml-->
+<view class="search">
+        <text class="search-text" >搜索歌曲</text>
+    </view>

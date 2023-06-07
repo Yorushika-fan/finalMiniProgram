@@ -1,0 +1,18 @@
+<view class="container">
+    <SearchBar bindtap="goSearch"/>
+
+    <block wx:for="{{4}}" wx:key="index" wx:for-item="item">
+        <view class="topList" bindtap="goTopList" data-topList="{{songs[item]}}">
+            <view class="image">
+            <image src="{{songs[item].coverImgUrl}}" mode=""/></view>
+            <view class="songs">
+                <block wx:for="{{3}}" wx:key="index" wx:for-item="items" >
+                        <text>{{(items+1) }}. {{ songsDetails[item].tracks[items].first}}</text>
+                </block>
+
+            </view>
+
+        </view>
+    </block>
+
+</view>

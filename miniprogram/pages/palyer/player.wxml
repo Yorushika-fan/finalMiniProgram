@@ -1,0 +1,32 @@
+<view class="qiyue_play">
+<image src="{{picUrl}}" mode=""/>
+<icon type="" class="iconfont icon-fanhui" bindtap="goHome"/>
+<view class="qiyue_title">
+  <text>{{musicName}}--</text>
+  <text>{{musicAuthor}}</text>
+  <view class="imgUrl">
+    <image src="{{picUrl}}" mode="" class="{{isPlay? 'rotateImg':''}}" style="animation-play-state:paused" />
+  </view>
+</view>
+
+
+<view class="qiyue_playfooter">
+  <view class="progress-box">
+  <text>{{PlayStartTime}}</text>
+  <view class="progress">
+    <slider bindchange='sliderChange' activeColor='blue' block-size="12" value='{{ProValue}}' />
+  </view>
+   
+    <text>{{PlayEndTime}}</text>
+<view class="palyBar">
+  <icon type="" class="iconfont icon-shangyishou"/>
+  <icon type="" class="{{currentBtn?'iconfont icon-bofang2':'iconfont icon-bofang1'}}" bindtap="play"/>
+  <icon type="" class="iconfont icon-xiayishou "/>
+
+</view>
+</view>
+</view>
+  
+
+
+</view>

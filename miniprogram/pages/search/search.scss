@@ -1,0 +1,39 @@
+/* pages/search/search.wxss */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  .hot{
+    display: flex;
+    flex-direction: column;
+    .hot-title{
+      margin-left: 20rpx;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+  }
+  .item-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20rpx 30rpx;
+
+    .title{
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      .detail{
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 30rpx;
+        padding-top: 5rpx;
+        color: gray
+      }
+    }
+  }
+  .likes{
+    font-size: 12px;
+    color: #333;
+  }
+}

@@ -1,0 +1,249 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4054753 */
+  src: url('//at.alicdn.com/t/c/font_4054753_hzux3s2p47d.woff2?t=1684733831264') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4054753_hzux3s2p47d.woff?t=1684733831264') format('woff'),
+       url('//at.alicdn.com/t/c/font_4054753_hzux3s2p47d.ttf?t=1684733831264') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fanhui:before {
+  content: "\e626";
+}
+
+.icon-bofang3:before {
+  content: "\e8a3";
+}
+
+.icon-shangyishou:before {
+  content: "\e63c";
+}
+
+.icon-xiayishou:before {
+  content: "\e63e";
+}
+
+.icon-bofang2:before {
+  content: "\e606";
+}
+
+.icon-bofang1:before {
+  content: "\e6ad";
+}
+
+.icon-yonghu:before {
+  content: "\e8c8";
+}
+
+.icon-MV:before {
+  content: "\e62c";
+}
+
+.icon-bofang:before {
+  content: "\e87c";
+}
+
+.icon-kefu:before {
+  content: "\e65e";
+}
+
+.icon-shoucang:before {
+  content: "\e86d";
+}
+
+.icon-zhibo:before {
+  content: "\e6ab";
+}
+
+.icon-youxi:before {
+  content: "\e602";
+}
+
+.icon-zhuanji:before {
+  content: "\e60a";
+}
+
+.icon-sousuo:before {
+  content: "\e651";
+}
+
+.icon-wode:before {
+  content: "\e600";
+}
+
+.icon-maikefeng:before {
+  content: "\e8c2";
+}
+
+.icon-icon-test:before {
+  content: "\e674";
+}
+
+.icon-shouyinji:before {
+  content: "\e689";
+}
+
+.icon-caidan:before {
+  content: "\e624";
+}
+
+.icon-paihangbang:before {
+  content: "\e8b3";
+}
+
+.icon-gedan:before {
+  content: "\e636";
+}
+
+.icon-meirituijian:before {
+  content: "\e74a";
+}
+
+.icon-shuba:before {
+  content: "\e625";
+}
+page{
+  /* background-image: linear-gradient( 140deg, #d9d9d9  10%, #010101 100%); */
+  /* background-image: url('https://p2.music.126.net/FCWD6ibS2JK2B3QAnXuzwQ==/109951167805892385.jpg'); */
+  background-size:cover;
+  backdrop-filter: blur(40px);
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: repeat !important;
+    background-color: #0a0a0a !important;
+    height: 100%;
+}
+
+.qiyue_play{
+  position: relative;
+  /* top: 0; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.qiyue_play>image{
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  filter: blur(100rpx);
+  
+}
+.qiyue_play>icon{
+  color: white;
+  font-size: 48rpx;
+  position: fixed;
+  top: 100rpx;
+  left: 40rpx;
+}
+
+.qiyue_title{
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-align: center;
+  margin-top: 220rpx;
+  color: white;
+}
+.qiyue_title .imgUrl{
+  width: 430rpx;
+  height: 430rpx;
+  margin-top: 200rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6rpx dotted #10AEFF;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+
+}
+.qiyue_title .imgUrl image{
+  width: 88%;
+  height: 88%;
+  border-radius: 50%;
+  align-self: center;
+  /* align-content: center; */
+  animation: rotateImg 10s linear infinite;
+
+}
+.qiyue_title .rotateImg{
+  animation-play-state:running !important
+}
+@keyframes rotateImg {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+.qiyue_playfooter{
+  position: absolute;
+  bottom: 0rpx;
+  height: 400rpx;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qiyue_playfooter .progress-box{
+  width: 70%;
+  color: white;
+  /* display: flex; */
+  position: relative;
+}
+
+.qiyue_playfooter .progress-box text:nth-child(1){
+  position: absolute;
+  top: 18rpx;
+  left: -70rpx;
+}
+.qiyue_playfooter .progress-box text:nth-child(3){
+  position: absolute;
+  top: 18rpx;
+  right: -70rpx;
+}
+
+.qiyue_playfooter .palyBar{
+width: 100%;
+height:  100rpx;
+display: flex;
+justify-content: center;
+margin-top: 40rpx;
+}
+
+.qiyue_playfooter .palyBar icon:nth-child(2){
+  font-size: 120rpx;
+  color: white;
+  /* position: relative;
+  top: 0rpx;
+  left: 20rpx; */
+}
+.qiyue_playfooter .palyBar icon:nth-child(1){
+  font-size: 70rpx;
+  color: white;
+  margin:30rpx ;
+  /* position: relative;
+  top: 20rpx;
+  left: -20rpx; */
+
+
+}
+.qiyue_playfooter .palyBar icon:nth-child(3){
+  font-size: 70rpx;
+  color: white;
+  margin:30rpx ;
+}

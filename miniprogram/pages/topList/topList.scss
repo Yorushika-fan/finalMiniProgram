@@ -1,0 +1,80 @@
+/* pages/topList/topList.wxss */
+
+.container{
+  display: flex;
+  flex-direction: column;
+
+  .top{
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    .info{
+      display: flex;
+      flex-direction: row;
+      margin-top: 40rpx;
+      .image{
+        margin: 0rpx 40rpx;
+        image{
+          width: 250rpx;
+          height: 250rpx;
+          border-radius: 5%;
+        }
+      }
+      .text{
+        display: flex;
+        flex-direction: column;
+        text{
+          margin-top: 20rpx;
+        }
+        .text-title{
+          font-size: 18px;
+          color: #fff;
+          font-weight: bold;
+        }
+        .text-info{
+          font-size: 12px;
+        }
+
+      }
+    }
+    .share{
+      button{
+          height: 60rpx;
+          line-height: 30rpx;
+          font-size: 13px;
+          font-weight: bold;
+          border-radius: 30rpx;
+          background-color: rgba($color: white, $alpha: 0.3);
+          color: white;
+          margin-bottom: 40rpx;
+          margin-top: 40rpx;
+          
+      }
+    }
+
+
+  }
+  .bottom{
+    flex: 1;
+      box-sizing: border-box;
+
+      font-size: 20px;
+      font-weight: bold;
+   
+    .songs{
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-top-left-radius: 30rpx;
+      border-top-right-radius: 30rpx;
+      padding: 0px 20rpx;
+      padding-top: 20rpx;
+  
+      .song{
+        margin-top: 10rpx;
+  
+      }
+    }
+  }
+
+}

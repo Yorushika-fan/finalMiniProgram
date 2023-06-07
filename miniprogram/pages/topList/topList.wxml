@@ -1,0 +1,35 @@
+<!--pages/topList/topList.wxml-->
+<view class="container" style="background:{{bgcolor}}">
+      <view class="top"> 
+        <view class="info">  
+            <view class="image">
+              <image src="{{songInfo.coverImgUrl}}" mode=""/>
+            </view>
+            <view class="text">
+                  <text class="text-title">{{songInfo.name}}</text> 
+                  <text class="text-brand">网易云音乐</text>          
+                  <text class="text-info">{{songInfo.description}}</text>   
+            </view>
+        </view>
+        <view class="share">
+            <button>分享给微信好友</button>
+        </view>
+        
+      </view>
+      <view class="bottom">
+        <view class="songs">
+      <view class="songs-title">
+      <text>播放全部</text>(共{{songsData.songs.length}}首)
+      </view>
+        <block wx:for="{{songsData.songs}}" wx:key="index">
+            <view class="song" bindtap="goPlay" data-id="{{item.id}}">
+             {{index + 1}} {{ item.name}}
+            </view>
+          
+        </block>
+        
+      </view>
+        
+      </view>
+  
+</view>

@@ -1,0 +1,20 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <SearchBar/>
+  <view class="hot">
+    <view class="hot-title">热搜榜</view>
+    <block wx:for="{{hotSongs}}" wx:key="index">
+        <view class="item-box">
+          <view class="title">
+            <text>{{index+1}}  {{item.searchWord}}</text>
+            <text class="detail">{{item.content}}</text>
+          </view>
+          <view class="likes">
+              {{item.score}}
+          </view>
+        </view>
+    </block>
+    
+  </view>
+
+</view>

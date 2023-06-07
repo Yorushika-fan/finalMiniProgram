@@ -1,0 +1,20 @@
+/* components/search/search.wxss */
+.search{
+  height: 60rpx;
+  border: 1px solid transparent;
+  background-color: rgba(192, 180, 180, 0.459);
+  border-radius: 30rpx;
+  margin: 10rpx 20rpx;
+  .search-text{
+    margin-left: 40rpx;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 60rpx;
+    color: gray;
+
+
+  }
+
+
+
+}
