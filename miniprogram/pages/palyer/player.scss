@@ -147,11 +147,15 @@ page{
 }
 
 .qiyue_title{
+  width: 60%;
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
   text-align: center;
   margin-top: 220rpx;
+  word-wrap:break-word;
+
+word-break:normal; 
   color: white;
 }
 .qiyue_title .imgUrl{

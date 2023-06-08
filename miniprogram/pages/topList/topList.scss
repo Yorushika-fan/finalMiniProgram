@@ -1,12 +1,38 @@
-/* pages/topList/topList.wxss */
+
+  .topBar{
+
+    height: 80rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    position: fixed;
+    padding-top: 80rpx;
+    padding-left: 20rpx;
+  
+  .left{
+    display: flex;
+    flex-direction: row;
+    image{
+      width: 50rpx;
+      height: 50rpx;
+      margin-right: 30rpx;
+    }
+  }
+  .right{
+    margin-left: 150rpx;
+  }
+}
 
 .container{
   display: flex;
   flex-direction: column;
 
+
   .top{
     display: flex;
     flex-direction: column;
+    margin-top: 140rpx;
 
     flex: 1;
     .info{
@@ -72,6 +98,11 @@
   
       .song{
         margin-top: 10rpx;
+        overflow:hidden; 
+        text-overflow:ellipsis; 
+        white-space:nowrap; 
+        
+
   
       }
     }

@@ -1,5 +1,16 @@
 <!--pages/topList/topList.wxml-->
+<view class="topBar" style="background:{{bgcolor}}">
+            <view class="left">
+                <image src="../../icons/Back.png" mode="" bindtap="goBack"/>
+                <image src="../../icons/Home.png" mode="" bindtap="goHome"/>
+            </view>
+            <view class="right">
+                歌单
+            </view>
+        </view>
+
 <view class="container" style="background:{{bgcolor}}">
+
       <view class="top"> 
         <view class="info">  
             <view class="image">
@@ -16,6 +27,7 @@
         </view>
         
       </view>
+     
       <view class="bottom">
         <view class="songs">
       <view class="songs-title">

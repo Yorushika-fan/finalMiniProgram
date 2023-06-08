@@ -7,12 +7,12 @@ Page({
    */
   data: {
       musicDetail:{} as any,
-      musicName:'',
-      musicAuthor:'',
-      picUrl:'',
-      musicUrl:[],
-      isPlay:false,  //是否播放
-      currentBtn:true,
+      musicName:''as string,
+      musicAuthor:'' as string,
+      picUrl:'' as string,
+      musicUrl:[] as Array<string>,
+      isPlay:false as boolean,  //是否播放
+      currentBtn:true as boolean,
       PlayStartTime:"00:00",//播放开始时间 
        PlayEndTime:"00:00",//播放结束时间
        ProValue:'0'//进度条值
@@ -112,10 +112,7 @@ music(){
   // 播放按钮切换
 
   play(){
-    // 判断是否有music实例，如果有不用重新创建实例
-    // if(!music){
-    
-    // }
+
     this.timer();
     if(this.data.currentBtn){
       music.play();
@@ -161,10 +158,12 @@ music.currentTime = second;
 this.timer();
 
   },
+
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+  async onLoad(options) {
     // 获取歌曲详情
     console.log(options.id);
     // 判断进入的方式，如果只有ids，为歌单进入，
@@ -198,19 +197,15 @@ this.timer();
       app.musicAuthor = this.data.musicAuthor
       app.picUrl = this.data.picUrl
     // 获取歌曲url
-    getMusicUrl(options.id).then((res:any)=>{
+      await getMusicUrl(options.id).then((res:any)=>{
       console.log("1111")
       console.log(res.data)
       console.log("1111")
-      musicUrl:res.data.data[0]
+      this.setData({
+        musicUrl:res.data.data[0]
+      })
     })
  
-
-
- 
-
-      // app.music();
-      // 进入页面自动播放
       this.music();
       // this.timer();
       this.play();

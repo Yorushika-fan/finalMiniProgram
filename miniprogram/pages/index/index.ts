@@ -3,6 +3,7 @@
 
 import {getTopList,getTopListDetail} from '../../api/index'
 type Colors = Record<string,string>
+type keywords = Record<string,string>
 Page({
   data: {
     songs:[] as Object,
@@ -12,7 +13,13 @@ Page({
       "新歌榜":"linear-gradient(90deg,#38a8b0,#8adcc9);",
       "原创榜":"linear-gradient(90deg,#5688cb,#7fd3f3);",
       "热歌榜":"linear-gradient(90deg,#d5433c,#f4a292);"
-    } as Colors
+    } as Colors,
+    SearchKeywords:{
+      "飙升榜":"milet",
+      "新歌榜":"aimer",
+      "原创榜":"ikura",
+      "热歌榜":"ヨルシカ"
+    } as keywords
 
   },
   // 事件处理函数
@@ -25,7 +32,7 @@ Page({
     let toplist =  event.currentTarget.dataset.toplist
     console.log(event.currentTarget.dataset.toplist.name)
       wx.navigateTo({
-        url:"../topList/topList?songInfo=" + encodeURIComponent(JSON.stringify(toplist))  + "&&bgColor=" + this.data.bgColors[toplist.name]
+        url:"../topList/topList?songInfo=" + encodeURIComponent(JSON.stringify(toplist))  + "&&bgColor=" + this.data.bgColors[toplist.name] + "&&keyWords=" + this.data.SearchKeywords[toplist.name]
       })
   },
 

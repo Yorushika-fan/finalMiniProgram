@@ -1,7 +1,7 @@
 // pages/search/search.ts
 
 
-import {getHotSongs} from "../../api/index"
+import {getHotSongs,getTopSongs} from "../../api/index"
 
 Page({
 
@@ -11,7 +11,9 @@ Page({
 
 
   data: {
-    "hotSongs":[] as Array<Object>
+    "hotSongs":[] as Array<Object>,
+    "keyWords":'' as string,
+    "isGoSearch": false as boolean
 
   },
 
@@ -29,6 +31,28 @@ Page({
   onLoad() {
       this.initData()
   },
+  goSearch(e:any){
+    console.log(e.detail.value)
+    this.setData({
+      isGoSearch:true
+    })
+    getTopSongs(e.detail.value).then((res:any)=>{
+        console.log(res.data.result.songs)
+        this.setData({
+          hotSongs:res.data.result.songs
+        })
+    })
+  },
+
+  goPlay(event:any){
+    if(this.data.isGoSearch){
+      wx.navigateTo({
+        url:"../palyer/player?id=" + event.currentTarget.dataset.id 
+      })
+    }
+
+
+},
 
   /**
    * 生命周期函数--监听页面初次渲染完成

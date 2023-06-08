@@ -24,8 +24,8 @@ export const getTopListDetail = (()=>{
 })
 
 //榜单歌曲接口失效，搜索歌曲模拟
-export const getTopSongs = (()=>{
-  return request("/search?keywords=milet","Get")
+export const getTopSongs = ((keywords:string)=>{
+  return request(`/search?keywords=${keywords}`,"Get")
 })
 
 //热搜歌曲列表

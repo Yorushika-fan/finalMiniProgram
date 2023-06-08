@@ -18,8 +18,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
 
-  initData(){
-    getTopSongs().then((res:any)=>{
+   //初始化数据
+  initData(keywords:string){
+    getTopSongs(keywords).then((res:any)=>{
       console.log(res.data.result.songs)
         this.setData({
           "songsData":res.data.result
@@ -28,7 +29,7 @@ Page({
   },
   onLoad(options:any) {
 
-    this.initData()
+    this.initData(options.keyWords)
     this.setData({
       songInfo:JSON.parse(decodeURIComponent(options.songInfo)),
       bgcolor:options.bgColor
@@ -43,6 +44,20 @@ Page({
         timingFunc: 'easeIn'
       }
     })
+  },
+  //返回主页
+  goHome(){
+    let pages = getCurrentPages()
+    if(pages.length >= 2){
+      wx.navigateBack({
+        delta:1
+  })
+    }else{
+      wx.reLaunch({
+        url:"../index/index"
+      })
+    }
+    
   },
 
   goPlay(event:any){
